@@ -4,10 +4,11 @@
   padding: 1rem;
   font-size: 1.6rem;
 }
-  .item {
+  .item a {
     color: white;
+    text-decoration: none;
   }
 
-.item.active {
+.item a.activeLink {
   color: gold;
 }

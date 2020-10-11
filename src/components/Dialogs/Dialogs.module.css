@@ -1,0 +1,26 @@
+.Dialogs {
+  display: grid;
+  grid-area: c;
+  grid-template-columns: 2fr 10fr;
+  background-color: cornflowerblue;
+}
+
+.DialogsItems {
+  padding: .5rem;
+}
+
+.DialogsItems .Active {
+  color: gold;
+}
+
+.Items {
+
+}
+
+.Messages {
+  padding: .5rem;
+}
+
+.Message {
+
+}
