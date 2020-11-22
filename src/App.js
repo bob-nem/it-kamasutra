@@ -8,15 +8,17 @@ import {Route, BrowserRouter} from "react-router-dom";
 
 const App = (props) => {
   return (
-    <BrowserRouter>
       <div className='app-wrapper'>
         <Header />
-        <Navbar />
+        <Navbar
+          props={props.siteBar}
+        />
         <Route
           path="/profile"
           render={ () =>
             <Profile
-              state={props.appState.profilePage}
+              state={props.state.profilePage}
+              addPost={props.addPost}
             />
           }
         />
@@ -24,12 +26,11 @@ const App = (props) => {
           path="/dialogs"
           render={ () =>
             <Dialogs
-              state={props.appState.dialogPage}
+              state={props.state.dialogPage}
             />
           }
         />
       </div>
-    </BrowserRouter>
   );
 }
 

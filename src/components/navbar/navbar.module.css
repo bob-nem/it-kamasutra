@@ -12,3 +12,27 @@
 .item a.activeLink {
   color: gold;
 }
+
+.FriendZone {
+  color: white;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+.FriendHeader {
+
+}
+
+.FriendList {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: .5rem;
+  align-self: center;
+}
+
+.FriendAva {
+  background-color: yellow;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}

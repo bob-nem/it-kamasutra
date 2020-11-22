@@ -1,8 +1,18 @@
 import React from 'react';
 import style from './navbar.module.css';
 import {NavLink} from "react-router-dom";
+import FriendList from './Friendlist';
 
-const Navbar = () => {
+const Navbar = (props) => {
+  let siteBar = [
+    {id: 1, friend: 'lorashik'},
+    {id: 2, friend: 'Shkura'},
+    {id: 3, friend: 'Morda'},
+  ];
+
+  let friendElements =
+    siteBar.map  ( f => <FriendList friend={f.friend} /> );
+
   return (
     <nav className={style.nav}>
       <div className={`${style.item} ${style.active}`}>
@@ -19,6 +29,12 @@ const Navbar = () => {
       </div>
       <div className={style.item}>
         <a>Settings</a>
+      </div>
+      <div className={style.FriendZone}>
+        <h3 className={style.FriendHeader}>Friends</h3>
+        <div className={style.FriendList}>
+          { friendElements }
+        </div>
       </div>
     </nav>
   )

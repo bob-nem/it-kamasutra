@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from '../render';
+
 let state = {
   profilePage: {
     postsData: [
@@ -21,6 +23,22 @@ let state = {
       {id: 1, message: 'Come on with us'},
     ],
   },
+
+  siteBar: [
+    {id: 1, friend: 'lorashik'},
+    {id: 2, friend: 'Shkura'},
+    {id: 3, friend: 'Morda'},
+  ]
 };
+
+export let addPost = (postMessage) => {
+  let newPost = {
+    id: 4,
+    message: postMessage,
+    likesCount: 0,
+  };
+  state.profilePage.postsData.push(newPost);
+  rerenderEntireTree (state);
+}
 
 export default state;
