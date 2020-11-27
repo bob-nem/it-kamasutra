@@ -4,7 +4,7 @@ import Header from './components/header/header';
 import Navbar from './components/navbar/navbar';
 import Profile from './components/profile/profile';
 import Dialogs from './components/Dialogs/Dialogs';
-import {Route, BrowserRouter} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 const App = (props) => {
   return (
@@ -17,8 +17,10 @@ const App = (props) => {
           path="/profile"
           render={ () =>
             <Profile
-              state={props.state.profilePage}
+              profilePage={props.state.profilePage}
+              newPostText={props.state.newPostText}
               addPost={props.addPost}
+              updateNewPostText={props.updateNewPostText}
             />
           }
         />
