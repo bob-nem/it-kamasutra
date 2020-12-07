@@ -26,6 +26,7 @@ const App = (props) => {
           path="/dialogs"
           render={ () =>
             <Dialogs
+            store={props.store}
               state={props.state.dialogPage}
             />
           }
